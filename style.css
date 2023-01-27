@@ -31,6 +31,11 @@ p {
   line-height: 1.6;
 }
 
+a {
+  color: #fff;
+  font-size: 14px;
+}
+
 .nav-bar {
   width: 100%;
   z-index: 3;
@@ -219,10 +224,9 @@ p {
 
 .content-text {
   width: 40%;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   padding: 0px 5%;
 }
@@ -361,13 +365,12 @@ p {
   padding: 20px 0px 20px 0px;
 }
 
-.footer-section a {
-  color: #fff;
-  font-size: 14px;
-}
-
 .footer-section .bold {
   font-weight: 700;
+}
+
+.footer a:hover {
+  filter: invert(0.2);
 }
 
 .footer-list {
@@ -397,11 +400,24 @@ p {
 }
 
 .social {
+  color: #fff;
   width: 30px;
   height: 30px;
-  padding: 5px;
-  background: white;
+  padding: 5px 5px 5px 0;
 }
+
+#facebook-icon:hover {
+  filter: invert(0.2);
+}
+
+#instagram-icon:hover {
+  filter: invert(0.2);
+}
+
+#tiktok-icon:hover {
+  filter: invert(0.2);
+}
+
 /* Footer */
 
 @media screen and (max-width: 1250px) {
