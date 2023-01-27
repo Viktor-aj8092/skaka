@@ -70,7 +70,7 @@ a {
   border-bottom-color: #fff;
 }
 
-.startsida-nav-item {
+.nav-list .logo {
   float: left;
   margin-left: 0px;
 }
@@ -88,6 +88,7 @@ a {
 }
 
 .hamburger {
+  float: right;
   display: none;
   padding: 5px;
   z-index: 1;
@@ -209,26 +210,24 @@ p {
 
 .site-container {
   width: 90%;
-  margin: 5% 0px;
   display: flex;
   flex-wrap: wrap;
+  margin: 40px 0;
 }
 
 .content {
-  width: 50%;
-  height: 400px;
+  width: 45%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2.5%;
 }
 
 .content-text {
-  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: baseline;
   justify-content: center;
-  padding: 0px 5%;
 }
 
 .content-para {
@@ -373,6 +372,10 @@ p {
   filter: invert(0.2);
 }
 
+.footer .logo {
+  align-self: center;
+}
+
 .footer-list {
   list-style-type: none;
 }
@@ -437,12 +440,9 @@ p {
 
 /* Media querys */
 @media screen and (max-width: 1040px) {
-  .site-container {
-    margin-top: 0px;
-  }
-
   .content {
     width: 100%;
+    padding: 0;
   }
 
   .content-text {
@@ -468,19 +468,6 @@ p {
     order: 6;
   }
 
-  .plats {
-    flex-direction: column;
-  }
-
-  .plats-karta {
-    width: 100%;
-  }
-
-  .plats-text {
-    width: 100%;
-    padding-bottom: 30px;
-  }
-
   #info3 {
     order: 8;
   }
@@ -489,8 +476,9 @@ p {
     order: 7;
   }
 
-  .kontakt-column {
-    width: 45%;
+  .site-container {
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 
   .footer {
@@ -527,13 +515,12 @@ p {
     min-height: 100vh;
   }
 
-  .nav-list {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
   .nav-item {
     display: none;
+  }
+
+  .nav-list .logo {
+    display: initial;
   }
 
   #nav-icon-wrapper {
@@ -548,28 +535,9 @@ p {
     opacity: 1;
   }
 
-  .item-pris {
-    padding: 5px;
-    font-size: 15px;
-  }
-
-  .item-produkt {
-    padding: 5px;
-    font-size: 15px;
-  }
-
-  .item-inköpsställen {
-    padding: 5px;
-    font-size: 15px;
-  }
-
   .anchor-tag-item {
     font-size: 14px;
     margin: 0px 5px;
-  }
-
-  .content {
-    height: 300px;
   }
 
   .full-size {
@@ -609,29 +577,8 @@ p {
     font-size: 30px;
   }
 
-  .banner-text h1 {
-    font-size: 30px;
-  }
-
-  .hero-text-brudfölje {
-    top: 35%;
-  }
-
-  .hero-text-brudfölje h1 {
-    font-size: 30px;
-  }
-
   .map {
     min-height: 200px;
-  }
-
-  .Kontaktuppgifter {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .kontakt-column {
-    width: 80%;
   }
 
   .sortering-div {
