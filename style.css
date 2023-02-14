@@ -31,9 +31,13 @@ p {
   line-height: 1.6;
 }
 
-a {
-  color: #fff;
-  font-size: 14px;
+h1 {
+  font-size: 40px;
+}
+
+.title {
+  margin-top: 40px;
+  padding: 20px 0px 20px 0px;
 }
 
 .nav-bar {
@@ -41,16 +45,23 @@ a {
   z-index: 3;
 }
 
+.nav-content {
+  display: flex;
+  background: rgb(18, 18, 80);
+  padding: 10px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav-list {
   list-style-type: none;
   overflow: hidden;
-  padding: 10px;
-  background: rgb(18, 18, 80);
   min-height: 30.25px;
+  display: flex;
 }
 
 .nav-item {
-  float: right;
   margin-top: 10px;
   margin-left: 20px;
   padding-bottom: 8px;
@@ -75,14 +86,14 @@ a {
   margin-left: 0px;
 }
 
-.anmälan-nav-item {
+.nav-item-button {
   border: 2px solid #fff;
   transition: 0.3s;
   padding: 8px 15px;
   margin-top: 0px;
 }
 
-.anmälan-nav-item:hover {
+.nav-item-button:hover {
   background: #fff;
   color: var(--light-black);
 }
@@ -173,13 +184,19 @@ a {
   width: 100%;
 }
 
-.img {
+.front-page .img {
   max-width: 100%;
   min-height: 250px;
   object-fit: cover;
 }
 
-.banner-text {
+.landing-page .img {
+  max-width: 100%;
+  min-height: 200px;
+  object-fit: cover;
+}
+
+.front-page .hero-text {
   width: 90%;
   color: #fff;
   position: absolute;
@@ -188,12 +205,22 @@ a {
   transform: translate(-50%, 20%);
 }
 
-.banner-text h1,
-p {
+.front-page .hero-text h1 {
   font-weight: lighter;
+  font-size: 46px;
 }
 
-.banner-text h1 {
+.landing-page .hero-text {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, 10%);
+}
+
+.landing-page .hero-text h1 {
+  font-weight: lighter;
   font-size: 46px;
 }
 
@@ -223,6 +250,15 @@ p {
   padding: 2.5%;
 }
 
+.content-full {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.5%;
+}
+
 .content-text {
   display: flex;
   flex-direction: column;
@@ -234,6 +270,18 @@ p {
   font-size: 16px;
   padding: 25px 0px;
   text-align: left;
+}
+
+.content-para a:hover {
+  filter: opacity(0.5);
+}
+
+.content-para a:visited {
+  color: inherit;
+}
+
+.content-text ul {
+  padding-left: 20px;
 }
 
 .content-link {
@@ -252,6 +300,32 @@ p {
 .content-img {
   max-width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.board {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 0px;
+}
+
+.board-member {
+  width: 20%;
+  padding: 0px 2.5%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-info {
+  padding: 20px 0px;
+}
+
+.round-img {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -357,19 +431,22 @@ p {
 /* Footer */
 .footer {
   width: 100%;
-  display: flex;
   background: rgb(18, 18, 80);
+}
+
+.footer-content {
+  display: flex;
   color: #fff;
   justify-content: space-evenly;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 100px 20px 0px;
+}
+
+.footer .centered {
+  align-self: center;
 }
 
 .footer-section .bold {
   font-weight: 700;
-}
-
-.footer a:hover {
-  filter: invert(0.2);
 }
 
 .footer .logo {
@@ -399,7 +476,6 @@ p {
 
 .socials-wrapper {
   display: flex;
-  justify-content: space-between;
 }
 
 .social {
@@ -409,32 +485,27 @@ p {
   padding: 5px 5px 5px 0;
 }
 
+.dark {
+  color: var(--light-black);
+}
+
 #facebook-icon:hover {
-  filter: invert(0.2);
+  filter: invert(0.4);
 }
 
 #instagram-icon:hover {
-  filter: invert(0.2);
+  filter: invert(0.4);
 }
 
 #tiktok-icon:hover {
-  filter: invert(0.2);
+  filter: invert(0.4);
 }
 
 /* Footer */
 
-@media screen and (max-width: 1250px) {
-  .boende-container {
-    flex-direction: column;
-  }
-
-  .slideshow-container {
-    width: 100%;
-  }
-
-  .boende-text {
-    width: 100%;
-    padding-bottom: 30px;
+@media screen and (max-width: 1300px) {
+  .board-member {
+    width: 45%;
   }
 }
 
@@ -447,6 +518,10 @@ p {
 
   .content-text {
     padding: 20px 15%;
+  }
+
+  .content-heading {
+    margin-top: 25px;
   }
 
   #cont1 {
@@ -477,13 +552,13 @@ p {
   }
 
   .site-container {
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin: 5% 0px;
   }
 
-  .footer {
+  .footer-content {
     justify-content: center;
     flex-direction: column;
+    padding-right: 0px;
   }
 
   .footer-section {
@@ -544,6 +619,11 @@ p {
     height: auto;
     margin: 10px 0px;
   }
+
+  .board-member {
+    width: 100%;
+    padding: 0px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -569,8 +649,8 @@ p {
     margin: 0px 7px;
   }
 
-  .hero-text h1 {
-    font-size: 30px;
+  .landing-page .hero-text {
+    top: 35%;
   }
 
   .heading-container h2 {

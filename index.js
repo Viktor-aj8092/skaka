@@ -1,3 +1,8 @@
+function toSite(string) {
+  let fullPage = string + ".html";
+  window.location.href = fullPage;
+}
+
 const startLink = document.querySelector(".startsida-nav-item");
 
 let menu = document.querySelector(".hamburger-menu");
