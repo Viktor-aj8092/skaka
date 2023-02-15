@@ -1,5 +1,6 @@
 function toSite(string) {
-  window.location.href = string;
+  let link = `./${string}`;
+  window.location.href = link;
 }
 
 const startLink = document.querySelector(".startsida-nav-item");
