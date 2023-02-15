@@ -1,6 +1,5 @@
 function toSite(string) {
-  let fullPage = string + ".html";
-  window.location.href = fullPage;
+  window.location.href = string;
 }
 
 const startLink = document.querySelector(".startsida-nav-item");
